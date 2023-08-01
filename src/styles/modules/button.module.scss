@@ -1,0 +1,29 @@
+.button{
+    height: auto;
+    border: none ;
+    padding: 0.8rem 2rem;
+    font-weight: 500;
+    border-radius: 6px;
+    font-size: 1.6rem;
+    text-transform: capitalize;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: 'Poppins';
+    &__select {
+        color: #17202A;
+        padding: 1rem;
+        border: none;
+        background-color: #E5E7E9;
+        width: 180px;
+    }
+}
+
+.button--primary {
+	background-color: #F5B041;
+	color: #F8F9F9 ;
+}
+.button--secondary {
+	background-color: #E5E7E9;
+	color: #17202A;
+}

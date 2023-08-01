@@ -1,0 +1,23 @@
+@import '../mixins';
+
+.app_wrapper{
+    max-width: 750px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.appHeader{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+}
+
+.content__wrapper {
+    background-color:#E5E7E9 ;
+	padding: 2rem;
+	border-radius: 12px;
+	@include smallDeviceSize {
+		padding: 1.5rem;
+	}
+}
