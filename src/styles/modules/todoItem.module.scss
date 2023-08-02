@@ -1,0 +1,59 @@
+
+
+.item {
+    display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem;
+    background-color: #ffffff;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins';
+    &:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.todoDetails {
+    display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+}
+.details{
+    display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.todoText {
+    word-break: break-all;
+	font-weight: 500;
+	font-size: 1rem;
+	color: #17202A ;
+}
+
+.checkButton {
+    
+}
+
+.todoActions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time {
+    margin-top: -0.6rem;
+    color: #808B96;
+    font-size: 0.8rem;
+}
+
+.delete, .update {
+    background-color: #BFC9CA ;
+    height: max-content;
+    margin: 0.4rem 0.4rem;
+    border-radius: 2px;
+    padding: 0.4rem;
+    cursor: pointer;
+}
