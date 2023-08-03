@@ -12,6 +12,7 @@
 }
 
 .container{
+    font-family: 'Poppins';
     max-width: 500px;
 	width: 94%;
 	margin: 0 auto;
@@ -25,12 +26,18 @@
 }
 .closeButton {
     position: absolute;
-    top: 5px;
-    right: 5px;
+    top: 8px;
+    right: 8px;
     background-color: #E74C3C;
     color: #ffffff;
     border-radius: 2px;
     cursor: pointer;
+    height: 1rem;
+    width: 1rem;
+    padding: 0.4rem;
+    &:hover {
+        background-color: #CB4335;
+    }
 }
 .formTitle {
 	color: #17202A;
@@ -47,12 +54,15 @@
         input, select {
             margin-top: 0.5rem;
 			margin-bottom: 2rem;
-			width: 96%; //by using width it came down to next line
+			width: 95%; //by using width it came down to next line
 			padding: 0.5rem;
 			border: none;
 			background-color: #ffffff;
 			font-size: 1.6rem;
         }
+        // input {
+        //     width: 80%;
+        // }
     }
 }
 

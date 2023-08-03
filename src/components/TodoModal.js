@@ -18,16 +18,14 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
             setStatus(todo.status);
         } else {
             setTitle('');
-            setStatus('Incomplete');
+            setStatus('Incomplete')
         }
-    },[type, title, modalOpen, todo])
+    },[modalOpen])
 
     const handleSubmit = (e) => {
-        // console.log(title);
-        // console.log(status);
         e.preventDefault();
         if(title === ''){
-            toast.error('Please enter a title');
+            toast.error('Please enter title');
             return;
         } 
         if(title && status){
@@ -40,14 +38,19 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
                             time: new Date().toLocaleString(),
                         })
                     )
+                    toast.success('Task added successfully');
                 }
                 if(type === 'update'){
-                    if(todo.title !== title || todo.status !== status){
+                    if(todo.title !== title.trim() || todo.status !== status){
                         dispatch(
                             updateTodo({
                                 ...todo, title, status
                             })
                         )
+                        toast.success('Task Updated successfully');
+                    } else {
+                        toast.error('No changes made');
+                        return;
                     }
                 }
         }
