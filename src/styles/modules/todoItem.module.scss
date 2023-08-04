@@ -53,8 +53,13 @@
     margin-top: -0.6rem;
     color: #808B96;
     font-size: 0.8rem;
+    padding: 0.2rem 0.2rem 0.2rem 0rem;
 }
-
+.timeAndStatus{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 .delete, .update {
     background-color: #BFC9CA ;
     height: max-content;

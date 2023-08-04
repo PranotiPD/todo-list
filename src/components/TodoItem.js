@@ -47,7 +47,11 @@ function TodoItem({todo}) {
                     ])}>
                         {todo.title}
                     </p>
-                    <p className={styles.time}>{todo.time}</p>
+                    <div className={styles.timeAndStatus}>
+                        <p className={styles.time}>{todo.time}</p>
+                        <p className={styles.time}>{todo.updatedStatus}</p>
+                    </div>
+                    
                 </div>
             </div>
             <div className={styles.todoActions}>

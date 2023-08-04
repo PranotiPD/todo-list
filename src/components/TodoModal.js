@@ -36,6 +36,7 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
                             title,
                             status,
                             time: new Date().toLocaleString(),
+                            updatedStatus: '',
                         })
                     )
                     toast.success('Task added successfully');
@@ -44,7 +45,7 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
                     if(todo.title !== title.trim() || todo.status !== status){
                         dispatch(
                             updateTodo({
-                                ...todo, title, status
+                                ...todo, title, status, time: new Date().toLocaleString(), updatedStatus: '. updated'
                             })
                         )
                         toast.success('Task Updated successfully');
@@ -59,7 +60,7 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
     return(
        modalOpen && (<div className={styles.wrapper}>
         <div className={styles.container}>
-            <div className={styles.closeButton} onClick={() => setModalOpen(false)}>
+            <div tabIndex={0} className={styles.closeButton} onClick={() => setModalOpen(false)}>
                 <MdOutlineClose/>
             </div>
             <form className={styles.form} onSubmit={(e) => handleSubmit(e)}>
