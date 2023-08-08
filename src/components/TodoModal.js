@@ -14,11 +14,11 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
 
     useEffect(()=> {
         if(type === 'update' && todo){
-            setTitle(todo.title);
+            setTitle(todo.title.trim());
             setStatus(todo.status);
         } else {
             setTitle('');
-            setStatus('Incomplete')
+            setStatus('Incomplete');
         }
     },[modalOpen])
 
@@ -26,6 +26,7 @@ function TodoModal({type, modalOpen, setModalOpen, todo}){
         e.preventDefault();
         if(title === ''){
             toast.error('Please enter title');
+            setTitle('');
             return;
         } 
         if(title && status){
